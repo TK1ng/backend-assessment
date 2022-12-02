@@ -1,0 +1,35 @@
+:root {
+    --bg-dark: #454372;
+    --secondary: #7692FF;
+    --light: #fff;
+
+    --transition: 0.3s all ease;
+}
+
+body {
+    background-color: var(--bg-dark);
+}
+
+button {
+    border-radius: 10px;
+    border: 2px solid var(--secondary);
+    background-color: transparent;
+    color: var(--light);
+    font-size: 1.2rem;
+    padding: 2rem;
+    transition: var(--transition);
+
+}
+
+button:hover {
+    background-color: var(--secondary);
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
