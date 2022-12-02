@@ -31,5 +31,12 @@ button:hover {
     gap: 1.5rem;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 50vh;
+}
+
+summary {
+    padding: 2rem;
+    border: 2px solid var(--secondary);
+    display: inline-block;
+    border-radius: 10px;
 }
