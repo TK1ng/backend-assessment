@@ -1,0 +1,24 @@
+{
+   "fortunes": [
+    {
+        "id": 1,
+        "fortune": "A beautiful, smart, and loving person will be coming into your life."
+    },
+    {
+        "id": 2,
+        "fortune": "A truly rich life contains love and art in abundance."
+    },
+    {
+        "id": 3,
+        "fortune": "Do not underestimate yourself. Human beings have unlimited potentials."
+    },
+    {
+        "id": 4,
+        "fortune":  "He who knows he has enough is rich."
+    },
+    {
+        "id": 5,
+        "fortune": "In order to take, one must first give."
+    }
+   ]
+}
