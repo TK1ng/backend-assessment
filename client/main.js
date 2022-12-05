@@ -35,6 +35,10 @@ const addFortune = (body) => {
 }
 
 const deleteFortune = () => {
+    if (!lastFortuneId) {
+        swal('Uh-Oh', 'It doesn\'t look like you have retrieved a fortune yet.\n Get a fortune first!');
+        return;
+    }
     axios.delete('http://localhost:4000/api/delete-fortune', { data: { id: lastFortuneId } })
         .then(res => {
             const { fortune } = res.data;
@@ -60,7 +64,6 @@ function submitHandler(e) {
 
     newFortune.value = '';
 }
-
 
 complimentBtn.addEventListener('click', getCompliment);
 fortuneBtn.addEventListener('click', getFortune);
