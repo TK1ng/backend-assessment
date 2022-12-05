@@ -2,19 +2,27 @@
     --bg-dark: #454372;
     --secondary: #7692FF;
     --light: #fff;
+    --btnHover: #2DD881;
+    --text-light: rgba(255, 255, 255, 0.8);
 
     --transition: 0.3s all ease;
 }
 
 body {
     background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+    font-size: 1.3rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 button {
     border-radius: 10px;
     border: 2px solid var(--secondary);
-    background-color: transparent;
+    background-color: var(--secondary);
     color: var(--light);
+    width: 75%;
+    max-width: 300px;
     font-size: 1.2rem;
     padding: 2rem;
     transition: var(--transition);
@@ -22,18 +30,30 @@ button {
 }
 
 button:hover {
-    background-color: var(--secondary);
+    background-color: var(--btnHover);
     cursor: pointer;
 }
 
 input {
-    padding: 0.5rem;
+    padding: 0.7rem;
+    width: 75%;
+    margin-bottom: 1rem;
+
 
 }
 
+#deleteFortuneBtn:hover {
+    background-color: #ED254E;
+    color: #fff;
+}
+
 .secondaryBtn {
-    padding: .5rem;
-    font-size: 0.8rem;
+    --btnHover: #0492d9;
+    padding: .9rem;
+    font-size: 0.9rem;
+    width: 75%;
+    margin: 0 auto;
+    
 }
 
 .flex {
@@ -42,20 +62,7 @@ input {
     gap: 1.5rem;
     align-items: center;
     justify-content: center;
-    height: 75vh;
-}
-
-.warningBtn {
-    background-color: #602632;
-    color: #C1BDB3;
-    border: none;
-    padding: .8rem;
-    font-size: 1rem;
-}
-
-.warningBtn:hover {
-    background-color: #ED254E;
-    color: #fff;
+    height: 100vh;
 }
 
 summary {
