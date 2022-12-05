@@ -2,6 +2,7 @@ const complimentBtn = document.getElementById("complimentBtn");
 const fortuneBtn = document.getElementById("getFortuneBtn");
 const addForm = document.getElementById("addFortune");
 const deleteFortuneBtn = document.getElementById("deleteFortuneBtn");
+const updatedFortunes = document.getElementById("updatedFortunes");
 
 let lastFortuneId;
 
@@ -29,6 +30,7 @@ const getFortune = () => {
 const addFortune = (body) => {
     axios.post("http://localhost:4000/api/fortune", body)
         .then(res => {
+
             const data = res.data;
             swal('HOORAY! 🎉', data);
         })
@@ -41,6 +43,7 @@ const deleteFortune = () => {
     }
     axios.delete('http://localhost:4000/api/delete-fortune', { data: { id: lastFortuneId } })
         .then(res => {
+            console.log(res.data);
             const { fortune } = res.data;
             swal('The following fortune has been deleted:', fortune);
         });

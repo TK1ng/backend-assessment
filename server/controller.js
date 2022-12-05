@@ -43,6 +43,7 @@ module.exports = {
         targetIndex = fortunes.indexOf(target);
 
         fortunes.splice(targetIndex, 1);
+        console.log(fortunes);
         res.status(200).send(target);
     },
     updateCompliment: (req, res) => {
