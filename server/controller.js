@@ -44,6 +44,9 @@ module.exports = {
 
         fortunes.splice(targetIndex, 1);
         res.status(200).send(target);
+    },
+    updateCompliment: (req, res) => {
+        console.log(req.body);
     }
 
 }

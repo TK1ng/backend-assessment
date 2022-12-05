@@ -42,6 +42,12 @@ input {
 
 }
 
+span {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
 #deleteFortuneBtn:hover {
     background-color: #ED254E;
     color: #fff;
