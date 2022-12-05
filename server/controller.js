@@ -36,17 +36,13 @@ module.exports = {
         res.status(200).send('Your custom fortune has been added!');
     },
     deleteFortune: (req, res) => {
-        // console.log('req received: ', req.body.id)
+
         let { id } = req.body;
 
         let target = fortunes.find(e => e.id === id);
         targetIndex = fortunes.indexOf(target);
 
-
         fortunes.splice(targetIndex, 1);
-
-        console.log(fortunes)
-
         res.status(200).send(target);
     }
 
