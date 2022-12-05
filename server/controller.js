@@ -1,12 +1,11 @@
-// TODO: CONNECT JSON FILE AND MOVE COMPLIMENTS/FORTUNES TO DB FILES
-const data = require('./db.json');
-const fortunes = data.fortunes;
+const fortuneDb = require('./fortunes.json');
+const complimentDb = require('./compliments.json')
+const fortunes = fortuneDb.fortunes;
+const compliments = complimentDb.compliments;
 
 module.exports = {
 
     getCompliment: (req, res) => {
-        const compliments = ["Gee, you're a smart cookie!", "Cool shirt!", "Your Javascript skills are stellar."];
-
         // choose random compliment
         let randomIndex = randomGenerator(compliments);
         let randomCompliment = compliments[randomIndex];

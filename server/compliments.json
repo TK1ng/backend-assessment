@@ -1,0 +1,7 @@
+{
+    "compliments": [
+        {"id": 1, "compliment": "Gee, you're a smart cookie!"},
+        {"id": 2, "compliment": "Cool shirt!"},
+        {"id": 3, "compliment": "Your Javascript skills are stellar."}
+    ]
+}

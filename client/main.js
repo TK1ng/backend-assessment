@@ -8,8 +8,8 @@ let lastFortuneId;
 const getCompliment = () => {
     axios.get("http://localhost:4000/api/compliment/")
         .then(res => {
-            const data = res.data;
-            swal('Hey...', data);
+            const { compliment } = res.data;
+            swal('Hey...', compliment);
         });
 };
 
@@ -46,6 +46,11 @@ function submitHandler(e) {
     e.preventDefault();
 
     let newFortune = document.getElementById('newFortune');
+
+    if (!newFortune.value) {
+        swal('Hold on a sec!', 'Field can not be blank! Enter a message to submit');
+        return;
+    }
 
     let body = {
         fortune: newFortune.value
